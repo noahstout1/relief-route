@@ -111,6 +111,15 @@ describe('shelters', () => {
   });
 });
 
+describe('plan shelters', () => {
+  it('does not recommend shelters hundreds of km away', () => {
+    const p = profile({ home: { districtId: 'bd-coxs', homeType: 'mud', nearCoast: true } });
+    const plan = buildPlan(p, COUNTRIES.BD, GUIDANCE, 'earthquake');
+    expect(plan.shelters).toEqual([]); // only earthquake site is in Dhaka, ~300 km away
+    expect(buildPlan(p, COUNTRIES.BD, GUIDANCE, 'cyclone').shelters.length).toBeGreaterThan(0);
+  });
+});
+
 describe('data integrity', () => {
   it.each(COUNTRY_LIST.map((c) => [c.code, c] as const))('%s has consistent references', (_code, c) => {
     const districtIds = new Set(c.districts.map((d) => d.id));

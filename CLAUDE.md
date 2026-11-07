@@ -85,3 +85,7 @@ src/types.ts        shared types
 - 2026-11-07: Live alerts use GDACS only. GDACS SEARCH `country=` takes ISO2 (ISO3 → 204), and including
   `TS` in `eventlist` returns 204 for everything. ReliefWeb API v2 now requires a pre-approved `appname`
   (403 otherwise) — not integrated yet; request one at https://apidoc.reliefweb.int/parameters#appname.
+- 2026-11-07: Browser walkthrough (headless Chrome via playwright-core, 390×844). Fixed clipped tab labels
+  (needed explicit lineHeight) and capped plan shelters at 50 km (`PLAN_SHELTER_MAX_KM`) — Cox's Bazar
+  earthquake plan was recommending a site 300 km away. Gotcha: `CI=1 npx expo start` disables Metro file
+  watching, so edits don't show up; don't set CI for interactive dev.

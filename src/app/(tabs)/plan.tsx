@@ -5,7 +5,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { ActionsSection, Checklist, DecisionCard, HAZARD_ICON, ProgramCard, ShelterCard } from '../../components/cards';
 import { Banner, Body, Card, H1, H2, Screen } from '../../components/ui';
 import { GUIDANCE, getCountry } from '../../data';
-import { buildPlan } from '../../engine/planEngine';
+import { buildPlan, PLAN_SHELTER_MAX_KM } from '../../engine/planEngine';
 import type { StringKey } from '../../i18n';
 import { useT } from '../../i18n/useT';
 import { useRequiredProfile } from '../../store/ProfileProvider';
@@ -56,7 +56,7 @@ export default function PlanScreen() {
 
       <H2>{t('yourShelter')}</H2>
       {plan.shelters.length === 0 ? (
-        <Banner tone="warn">{t('noShelter')}</Banner>
+        <Banner tone="warn">{t('noShelterNearby', { km: PLAN_SHELTER_MAX_KM })}</Banner>
       ) : (
         plan.shelters.map((r, i) => <ShelterCard key={r.shelter.id} item={r} t={t} rank={i} />)
       )}

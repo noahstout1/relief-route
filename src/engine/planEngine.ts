@@ -33,6 +33,9 @@ export interface Plan {
   origin: LatLon;
 }
 
+/** Shelters farther than this are not useful in an emergency; the plan says so instead. */
+export const PLAN_SHELTER_MAX_KM = 50;
+
 const PHASE_ORDER: Phase[] = ['prepare', 'evacuate', 'during', 'after'];
 
 type Rule = { flag: Flag | Flag[]; points: number; reason: string };
@@ -141,7 +144,7 @@ export function buildPlan(profile: Profile, country: CountryData, guidance: Guid
     decision: decide(hazard, flags, profile),
     phases,
     kit,
-    shelters: findShelters(country, origin, flags, { hazard, limit: 3 }),
+    shelters: findShelters(country, origin, flags, { hazard, limit: 3, maxKm: PLAN_SHELTER_MAX_KM }),
     agencies,
     programs,
     flags,

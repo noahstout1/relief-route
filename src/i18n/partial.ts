@@ -11,7 +11,7 @@ const bn: Table = {
   next: 'পরবর্তী', back: 'পেছনে', save: 'সংরক্ষণ', finish: 'আমার পরিকল্পনা তৈরি করুন', yes: 'হ্যাঁ', no: 'না',
   stepWhere: 'আপনি কোথায় থাকেন?', stepHousehold: 'আপনার সাথে কে থাকে?', stepHome: 'আপনার বাড়ি সম্পর্কে', stepContacts: 'জরুরি যোগাযোগ',
   country: 'দেশ', district: 'জেলা / এলাকা', language: 'ভাষা',
-  tabHome: 'হোম', tabPlan: 'আমার পরিকল্পনা', tabHelp: 'সাহায্য', tabProfile: 'প্রোফাইল',
+  tabHome: 'হোম', tabPlan: 'পরিকল্পনা', tabHelp: 'সাহায্য', tabProfile: 'প্রোফাইল',
   hz_cyclone: 'ঘূর্ণিঝড়', hz_flood: 'বন্যা', hz_earthquake: 'ভূমিকম্প', hz_landslide: 'ভূমিধস', hz_tsunami: 'সুনামি',
   dec_evacuate: 'এখনই সরে যান', dec_get_ready: 'সরে যাওয়ার প্রস্তুতি নিন', dec_stay: 'থাকুন এবং প্রস্তুতি নিন', whyThis: 'কারণ',
   ph_prepare: 'এখনই প্রস্তুতি নিন', ph_evacuate: 'সতর্কবার্তা এলে', ph_during: 'চলাকালীন', ph_after: 'পরে',

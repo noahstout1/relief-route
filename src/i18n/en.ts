@@ -80,6 +80,7 @@ export const en = {
   programsForYou: 'Programs for you',
   howToApply: 'How to apply',
   noShelter: 'No suitable shelter in our data for this area. Ask your local authority.',
+  noShelterNearby: 'No listed shelter within {km} km for this disaster. Ask your local authority where to go. For earthquakes, go to a large open space away from buildings, walls and power lines.',
   kmAway: '{km} km away',
   missing: 'Missing: {list}',
   directions: 'Directions',

@@ -22,8 +22,8 @@ export default function TabsLayout() {
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: colors.primary,
-        tabBarLabelStyle: { fontSize: 13, fontWeight: '600' },
-        tabBarStyle: { height: 64, paddingBottom: 8, paddingTop: 6 },
+        tabBarLabelStyle: { fontSize: 13, lineHeight: 18, fontWeight: '600' },
+        tabBarStyle: { height: 66, paddingTop: 6, paddingBottom: 8 },
       }}
     >
       <Tabs.Screen name="index" options={{ title: t('tabHome'), tabBarIcon: icon('home') }} />

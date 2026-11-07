@@ -24,7 +24,7 @@ export function findShelters(
   country: CountryData,
   origin: LatLon,
   flags: Set<Flag>,
-  opts: { hazard?: HazardType; suitableOnly?: boolean; limit?: number } = {},
+  opts: { hazard?: HazardType; suitableOnly?: boolean; limit?: number; maxKm?: number } = {},
 ): RankedShelter[] {
   const needs = neededFeatures(flags);
   const ranked = country.shelters
@@ -35,6 +35,7 @@ export function findShelters(
       missing: needs.filter((n) => !shelter.features.includes(n)),
     }))
     .filter((r) => !opts.suitableOnly || r.missing.length === 0)
+    .filter((r) => opts.maxKm === undefined || r.distanceKm <= opts.maxKm)
     .sort((a, b) => a.distanceKm + a.missing.length * MISSING_PENALTY_KM - (b.distanceKm + b.missing.length * MISSING_PENALTY_KM));
   return opts.limit ? ranked.slice(0, opts.limit) : ranked;
 }
