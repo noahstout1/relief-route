@@ -1,13 +1,17 @@
 {
   "expo": {
-    "name": "buildathon",
-    "slug": "buildathon",
-    "version": "1.0.0",
+    "name": "ReliefRoute",
+    "slug": "relief-route",
+    "scheme": "reliefroute",
+    "version": "0.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "ReliefRoute uses your location to find the nearest shelter and relief services."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -16,10 +20,25 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION"],
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar",
+      "expo-localization",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "ReliefRoute uses your location to find the nearest shelter and relief services."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }
