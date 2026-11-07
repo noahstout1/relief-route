@@ -57,7 +57,7 @@ src/types.ts        shared types
 ## Status / roadmap
 - [x] 1. Scaffold Expo app + CLAUDE.md + README
 - [x] 2. Types + offline seed data (5 countries) + guidance templates
-- [ ] 3. Profile store + onboarding flow
+- [x] 3. Profile store (AsyncStorage) + 4-step onboarding + editable Profile tab
 - [ ] 4. Plan engine + tests + Plan tab
 - [ ] 5. Help tab (shelters, agencies, tap-to-call, directions)
 - [ ] 6. Live alerts service + Home tab, offline caching
