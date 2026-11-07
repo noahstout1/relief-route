@@ -60,7 +60,7 @@ src/types.ts        shared types
 - [x] 3. Profile store (AsyncStorage) + 4-step onboarding + editable Profile tab
 - [x] 4. Plan engine (flags → risk rules → decision, guidance, kit, shelters, programs) + 18 Jest tests + Plan tab
 - [x] 5. Help tab: tap-to-call emergency numbers, ranked shelters w/ suitability filter, agencies, directions
-- [ ] 6. Live alerts service + Home tab, offline caching
+- [x] 6. Live GDACS alerts (country + nearby offshore cyclones), AsyncStorage cache, Home tab with urgent banner
 - [ ] 7. i18n + accessibility polish
 
 ## Decisions log
@@ -72,3 +72,6 @@ src/types.ts        shared types
 - 2026-11-07: Shelter ranking = distance + 15 km penalty per missing needed feature (wheelchair, power,
   medical, pets, livestock). A nearby shelter lacking a feature can still rank first; the UI shows what is
   missing rather than hiding it. Risk rules live in `RULES` in `src/engine/planEngine.ts`.
+- 2026-11-07: Live alerts use GDACS only. GDACS SEARCH `country=` takes ISO2 (ISO3 → 204), and including
+  `TS` in `eventlist` returns 204 for everything. ReliefWeb API v2 now requires a pre-approved `appname`
+  (403 otherwise) — not integrated yet; request one at https://apidoc.reliefweb.int/parameters#appname.
