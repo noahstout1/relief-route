@@ -80,6 +80,6 @@
     { "id": "ht-s3", "name": "Les Cayes Lycée shelter (sample)", "districtId": "ht-cayes", "lat": 18.2, "lon": -73.74, "kind": "school", "capacity": 700, "features": ["water", "medical"], "hazards": ["cyclone", "flood"], "verified": false },
     { "id": "ht-s4", "name": "Jérémie church community hall (sample)", "districtId": "ht-jeremie", "lat": 18.64, "lon": -74.11, "kind": "community_hall", "capacity": 400, "features": ["water"], "hazards": ["cyclone", "tsunami"], "verified": false },
     { "id": "ht-s5", "name": "Gonaïves upland school shelter (sample)", "districtId": "ht-gonaives", "lat": 19.46, "lon": -72.67, "kind": "school", "capacity": 600, "features": ["wheelchair", "water", "livestock"], "hazards": ["cyclone", "flood"], "verified": false },
-    { "id": "ht-s6", "name": "Cap-Haïtien hospital-adjacent shelter (sample)", "districtId": "ht-cap", "lat": 19.75, "lon": -72.21, "kind": "evacuation_center", "capacity": 500, "features": ["medical", "power", "wheelchair"], "hazards": ["cyclone", "flood", "earthquake"], "verified": false }
+    { "id": "ht-s6", "name": "Cap-Haïtien hospital-adjacent shelter (sample)", "districtId": "ht-cap", "lat": 19.75, "lon": -72.21, "kind": "evacuation_center", "capacity": 500, "features": ["medical", "power", "wheelchair"], "hazards": ["cyclone", "flood", "earthquake", "landslide"], "verified": false }
   ]
 }

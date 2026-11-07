@@ -58,7 +58,7 @@ src/types.ts        shared types
 - [x] 1. Scaffold Expo app + CLAUDE.md + README
 - [x] 2. Types + offline seed data (5 countries) + guidance templates
 - [x] 3. Profile store (AsyncStorage) + 4-step onboarding + editable Profile tab
-- [ ] 4. Plan engine + tests + Plan tab
+- [x] 4. Plan engine (flags → risk rules → decision, guidance, kit, shelters, programs) + 18 Jest tests + Plan tab
 - [ ] 5. Help tab (shelters, agencies, tap-to-call, directions)
 - [ ] 6. Live alerts service + Home tab, offline caching
 - [ ] 7. i18n + accessibility polish
@@ -69,3 +69,6 @@ src/types.ts        shared types
 - 2026-11-07: Reordered milestones 2/3 — data layer landed before onboarding because the country/district
   pickers depend on it. Phone numbers only included where well-known; others left blank rather than guessed.
   All shelters are `verified: false` sample entries with approximate coordinates.
+- 2026-11-07: Shelter ranking = distance + 15 km penalty per missing needed feature (wheelchair, power,
+  medical, pets, livestock). A nearby shelter lacking a feature can still rank first; the UI shows what is
+  missing rather than hiding it. Risk rules live in `RULES` in `src/engine/planEngine.ts`.
