@@ -1,0 +1,117 @@
+{
+  "code": "BD",
+  "name": "Bangladesh",
+  "flag": "🇧🇩",
+  "languages": ["bn", "en"],
+  "lastVerified": "2026-11-07",
+  "hazards": ["cyclone", "flood", "earthquake", "landslide"],
+  "emergencyNumbers": { "general": "999", "disaster": "1090" },
+  "warningSystem": "Cyclone signals are numbered 1–10. Signal 8 or higher means DANGER: evacuate coastal areas. Cyclone Preparedness Programme (CPP) volunteers announce warnings with megaphones and flags. Call 1090 (free) for the latest weather and disaster warnings.",
+  "agencies": [
+    {
+      "id": "bd-ddm",
+      "name": "Department of Disaster Management",
+      "shortName": "DDM",
+      "kind": "government",
+      "description": "National government agency for disaster response, relief distribution and shelters. Your Upazila and Union Parishad offices coordinate local relief.",
+      "phone": "1090",
+      "website": "https://ddm.gov.bd"
+    },
+    {
+      "id": "bd-cpp",
+      "name": "Cyclone Preparedness Programme",
+      "shortName": "CPP",
+      "kind": "warning",
+      "description": "Joint programme of the government and Bangladesh Red Crescent. Volunteers spread warnings and help coastal families evacuate to cyclone shelters.",
+      "hazards": ["cyclone"],
+      "website": "https://cpp.gov.bd"
+    },
+    {
+      "id": "bd-bmd",
+      "name": "Bangladesh Meteorological Department",
+      "shortName": "BMD",
+      "kind": "warning",
+      "description": "Issues official cyclone signals, heavy-rain and weather warnings.",
+      "hazards": ["cyclone", "flood", "landslide"],
+      "website": "https://live.bmd.gov.bd"
+    },
+    {
+      "id": "bd-ffwc",
+      "name": "Flood Forecasting and Warning Centre",
+      "shortName": "FFWC",
+      "kind": "warning",
+      "description": "River flood forecasts and warnings for all major rivers.",
+      "hazards": ["flood"],
+      "website": "http://www.ffwc.gov.bd"
+    },
+    {
+      "id": "bd-bdrcs",
+      "name": "Bangladesh Red Crescent Society",
+      "shortName": "BDRCS",
+      "kind": "red_cross",
+      "description": "Emergency first aid, evacuation support, relief items, cash assistance and family tracing.",
+      "website": "https://bdrcs.org"
+    },
+    {
+      "id": "bd-fire",
+      "name": "Fire Service and Civil Defence",
+      "kind": "government",
+      "description": "Search and rescue, fire and building collapse response. Reach through 999.",
+      "phone": "999",
+      "hazards": ["earthquake", "flood", "landslide"]
+    }
+  ],
+  "programs": [
+    {
+      "id": "bd-gr",
+      "name": "Gratuitous Relief (GR) food and cash",
+      "provider": "Government (DDM via Union Parishad)",
+      "description": "Emergency rice, dry food and cash for households affected by a disaster.",
+      "howToApply": "Register with your Union Parishad chairman or ward member after the disaster. Bring your national ID card if you have it.",
+      "eligibility": {}
+    },
+    {
+      "id": "bd-housing",
+      "name": "House repair grant (Corrugated iron sheets + cash)",
+      "provider": "Government (DDM)",
+      "description": "Tin sheets and cash for families whose homes were damaged or destroyed.",
+      "howToApply": "Report damage to your Union Parishad. Officials assess damage and add you to the beneficiary list.",
+      "eligibility": { "any": ["weak_home"] }
+    },
+    {
+      "id": "bd-bdrcs-cash",
+      "name": "Red Crescent emergency cash",
+      "provider": "Bangladesh Red Crescent Society",
+      "description": "Multi-purpose cash grants, often prioritising households with young children, elderly people, pregnant women or people with disabilities.",
+      "howToApply": "Volunteers register families in affected areas. Contact your nearest BDRCS unit.",
+      "eligibility": { "any": ["infants", "children", "elderly", "pregnant", "mobility"] }
+    },
+    {
+      "id": "bd-livestock",
+      "name": "Livestock and fodder support",
+      "provider": "Department of Livestock Services",
+      "description": "Emergency fodder, vaccination and veterinary care for animals in flood and cyclone areas.",
+      "howToApply": "Contact the Upazila Livestock Office.",
+      "eligibility": { "all": ["livestock"] }
+    }
+  ],
+  "districts": [
+    { "id": "bd-coxs", "name": "Cox's Bazar", "region": "Chattogram", "lat": 21.45, "lon": 91.97, "coastal": true, "floodProne": true, "landslideProne": true, "seismic": "moderate" },
+    { "id": "bd-ctg", "name": "Chattogram", "region": "Chattogram", "lat": 22.36, "lon": 91.78, "coastal": true, "floodProne": true, "landslideProne": true, "seismic": "moderate" },
+    { "id": "bd-khulna", "name": "Khulna", "region": "Khulna", "lat": 22.82, "lon": 89.55, "coastal": true, "floodProne": true, "landslideProne": false, "seismic": "low" },
+    { "id": "bd-bhola", "name": "Bhola", "region": "Barishal", "lat": 22.69, "lon": 90.65, "coastal": true, "floodProne": true, "landslideProne": false, "seismic": "low" },
+    { "id": "bd-sylhet", "name": "Sylhet", "region": "Sylhet", "lat": 24.89, "lon": 91.87, "coastal": false, "floodProne": true, "landslideProne": true, "seismic": "high" },
+    { "id": "bd-kurigram", "name": "Kurigram", "region": "Rangpur", "lat": 25.81, "lon": 89.64, "coastal": false, "floodProne": true, "landslideProne": false, "seismic": "moderate" },
+    { "id": "bd-dhaka", "name": "Dhaka", "region": "Dhaka", "lat": 23.81, "lon": 90.41, "coastal": false, "floodProne": true, "landslideProne": false, "seismic": "moderate" }
+  ],
+  "shelters": [
+    { "id": "bd-s1", "name": "Cox's Bazar Sadar Multipurpose Cyclone Shelter (sample)", "districtId": "bd-coxs", "lat": 21.44, "lon": 91.98, "kind": "cyclone_shelter", "capacity": 1500, "features": ["wheelchair", "women_space", "water", "livestock"], "hazards": ["cyclone", "flood", "tsunami"], "verified": false },
+    { "id": "bd-s2", "name": "Ukhiya Upazila Health Complex Shelter (sample)", "districtId": "bd-coxs", "lat": 21.29, "lon": 92.1, "kind": "evacuation_center", "capacity": 600, "features": ["medical", "power", "water", "wheelchair"], "hazards": ["cyclone", "flood", "landslide"], "verified": false },
+    { "id": "bd-s3", "name": "Patenga Cyclone Shelter (sample)", "districtId": "bd-ctg", "lat": 22.24, "lon": 91.8, "kind": "cyclone_shelter", "capacity": 1200, "features": ["women_space", "water"], "hazards": ["cyclone", "flood"], "verified": false },
+    { "id": "bd-s4", "name": "Dacope Primary School Shelter (sample)", "districtId": "bd-khulna", "lat": 22.57, "lon": 89.51, "kind": "school", "capacity": 800, "features": ["water", "livestock", "pets"], "hazards": ["cyclone", "flood"], "verified": false },
+    { "id": "bd-s5", "name": "Char Fasson Killa & Cyclone Shelter (sample)", "districtId": "bd-bhola", "lat": 22.19, "lon": 90.76, "kind": "cyclone_shelter", "capacity": 1000, "features": ["livestock", "women_space", "water"], "hazards": ["cyclone", "flood"], "verified": false },
+    { "id": "bd-s6", "name": "Sylhet Sadar Flood Shelter (sample)", "districtId": "bd-sylhet", "lat": 24.9, "lon": 91.86, "kind": "school", "capacity": 700, "features": ["wheelchair", "water", "medical"], "hazards": ["flood", "earthquake"], "verified": false },
+    { "id": "bd-s7", "name": "Kurigram Embankment Raised Platform (sample)", "districtId": "bd-kurigram", "lat": 25.8, "lon": 89.66, "kind": "open_space", "features": ["livestock", "pets"], "hazards": ["flood"], "verified": false },
+    { "id": "bd-s8", "name": "Dhaka University Open Ground (sample)", "districtId": "bd-dhaka", "lat": 23.73, "lon": 90.4, "kind": "open_space", "features": ["wheelchair", "water"], "hazards": ["earthquake"], "verified": false }
+  ]
+}

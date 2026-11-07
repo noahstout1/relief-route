@@ -1,0 +1,106 @@
+{
+  "code": "PH",
+  "name": "Philippines",
+  "flag": "🇵🇭",
+  "languages": ["tl", "en"],
+  "lastVerified": "2026-11-07",
+  "hazards": ["cyclone", "flood", "earthquake", "landslide", "tsunami"],
+  "emergencyNumbers": { "general": "911" },
+  "warningSystem": "PAGASA issues Tropical Cyclone Wind Signals 1–5 and color-coded rainfall warnings (yellow, orange, red). PHIVOLCS issues earthquake and tsunami warnings. Your barangay will announce pre-emptive or forced evacuation.",
+  "agencies": [
+    {
+      "id": "ph-ndrrmc",
+      "name": "National Disaster Risk Reduction and Management Council",
+      "shortName": "NDRRMC / OCD",
+      "kind": "government",
+      "description": "Coordinates national disaster response through the Office of Civil Defense. Your city/municipal DRRM office and barangay run local evacuation.",
+      "website": "https://ndrrmc.gov.ph"
+    },
+    {
+      "id": "ph-pagasa",
+      "name": "PAGASA (weather bureau)",
+      "shortName": "PAGASA",
+      "kind": "warning",
+      "description": "Official typhoon signals, rainfall and flood warnings.",
+      "hazards": ["cyclone", "flood", "landslide"],
+      "website": "https://www.pagasa.dost.gov.ph"
+    },
+    {
+      "id": "ph-phivolcs",
+      "name": "PHIVOLCS",
+      "kind": "warning",
+      "description": "Earthquake, tsunami and volcano monitoring and warnings.",
+      "hazards": ["earthquake", "tsunami"],
+      "website": "https://www.phivolcs.dost.gov.ph"
+    },
+    {
+      "id": "ph-dswd",
+      "name": "Department of Social Welfare and Development",
+      "shortName": "DSWD",
+      "kind": "government",
+      "description": "Runs evacuation center relief, family food packs and crisis assistance.",
+      "website": "https://www.dswd.gov.ph"
+    },
+    {
+      "id": "ph-prc",
+      "name": "Philippine Red Cross",
+      "shortName": "PRC",
+      "kind": "red_cross",
+      "description": "Rescue, first aid, blood, relief goods and welfare desks in evacuation centers. Hotline 143.",
+      "phone": "143",
+      "website": "https://redcross.org.ph"
+    }
+  ],
+  "programs": [
+    {
+      "id": "ph-ffp",
+      "name": "Family Food Packs",
+      "provider": "DSWD",
+      "description": "Rice, canned goods and coffee/cereal for displaced families, distributed in evacuation centers and affected barangays.",
+      "howToApply": "Register at your evacuation center or barangay hall. Keep your Disaster Assistance Family Access Card (DAFAC) if you are given one.",
+      "eligibility": {}
+    },
+    {
+      "id": "ph-aics",
+      "name": "Assistance to Individuals in Crisis Situations (AICS)",
+      "provider": "DSWD",
+      "description": "Cash for medical, burial, food or transport needs after a crisis.",
+      "howToApply": "Go to a DSWD field office or crisis intervention unit with a valid ID and supporting documents (e.g. medical certificate).",
+      "eligibility": {}
+    },
+    {
+      "id": "ph-esa",
+      "name": "Emergency Shelter Assistance",
+      "provider": "DSWD / local government",
+      "description": "Cash or materials for families whose houses were partially or totally damaged.",
+      "howToApply": "Report damage to your barangay so it is recorded in the damage assessment list.",
+      "eligibility": { "any": ["weak_home"] }
+    },
+    {
+      "id": "ph-prc-health",
+      "name": "Red Cross health and welfare desk",
+      "provider": "Philippine Red Cross",
+      "description": "First aid, maternal and child health support, psychosocial support and family reunification.",
+      "howToApply": "Visit the Red Cross welfare desk at the evacuation center or call 143.",
+      "eligibility": { "any": ["infants", "pregnant", "elderly", "medication", "mobility"] }
+    }
+  ],
+  "districts": [
+    { "id": "ph-leyte", "name": "Tacloban / Leyte", "region": "Eastern Visayas", "lat": 11.24, "lon": 125.0, "coastal": true, "floodProne": true, "landslideProne": true, "seismic": "high" },
+    { "id": "ph-manila", "name": "Metro Manila", "region": "NCR", "lat": 14.6, "lon": 120.98, "coastal": true, "floodProne": true, "landslideProne": false, "seismic": "high" },
+    { "id": "ph-albay", "name": "Legazpi / Albay", "region": "Bicol", "lat": 13.14, "lon": 123.73, "coastal": true, "floodProne": true, "landslideProne": true, "seismic": "high" },
+    { "id": "ph-cebu", "name": "Cebu City", "region": "Central Visayas", "lat": 10.32, "lon": 123.89, "coastal": true, "floodProne": true, "landslideProne": true, "seismic": "moderate" },
+    { "id": "ph-davao", "name": "Davao City", "region": "Davao", "lat": 7.07, "lon": 125.61, "coastal": true, "floodProne": true, "landslideProne": true, "seismic": "high" },
+    { "id": "ph-benguet", "name": "Baguio / Benguet", "region": "Cordillera", "lat": 16.41, "lon": 120.6, "coastal": false, "floodProne": false, "landslideProne": true, "seismic": "high" }
+  ],
+  "shelters": [
+    { "id": "ph-s1", "name": "Tacloban City Astrodome (sample)", "districtId": "ph-leyte", "lat": 11.23, "lon": 125.0, "kind": "evacuation_center", "capacity": 2000, "features": ["wheelchair", "medical", "water", "women_space"], "hazards": ["flood", "landslide"], "verified": false },
+    { "id": "ph-s2", "name": "Palo Uphill Elementary School (sample)", "districtId": "ph-leyte", "lat": 11.15, "lon": 124.98, "kind": "school", "capacity": 600, "features": ["water", "pets"], "hazards": ["cyclone", "flood", "tsunami"], "verified": false },
+    { "id": "ph-s3", "name": "Marikina Sports Center (sample)", "districtId": "ph-manila", "lat": 14.63, "lon": 121.1, "kind": "evacuation_center", "capacity": 3000, "features": ["wheelchair", "medical", "power", "water", "women_space"], "hazards": ["cyclone", "flood"], "verified": false },
+    { "id": "ph-s4", "name": "Quezon Memorial Circle open area (sample)", "districtId": "ph-manila", "lat": 14.65, "lon": 121.05, "kind": "open_space", "features": ["wheelchair", "pets"], "hazards": ["earthquake"], "verified": false },
+    { "id": "ph-s5", "name": "Albay Astrodome (sample)", "districtId": "ph-albay", "lat": 13.15, "lon": 123.75, "kind": "evacuation_center", "capacity": 1500, "features": ["wheelchair", "water", "medical"], "hazards": ["cyclone", "flood", "landslide"], "verified": false },
+    { "id": "ph-s6", "name": "Cebu City Sports Complex (sample)", "districtId": "ph-cebu", "lat": 10.3, "lon": 123.89, "kind": "evacuation_center", "capacity": 2500, "features": ["wheelchair", "water", "power"], "hazards": ["cyclone", "flood", "earthquake"], "verified": false },
+    { "id": "ph-s7", "name": "Davao City Recreation Center (sample)", "districtId": "ph-davao", "lat": 7.08, "lon": 125.6, "kind": "evacuation_center", "capacity": 1800, "features": ["wheelchair", "medical", "water"], "hazards": ["cyclone", "flood", "tsunami"], "verified": false },
+    { "id": "ph-s8", "name": "Baguio Convention Center (sample)", "districtId": "ph-benguet", "lat": 16.41, "lon": 120.6, "kind": "evacuation_center", "capacity": 1000, "features": ["wheelchair", "water", "power"], "hazards": ["cyclone", "landslide"], "verified": false }
+  ]
+}

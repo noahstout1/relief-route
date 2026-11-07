@@ -1,0 +1,85 @@
+{
+  "code": "HT",
+  "name": "Haiti",
+  "flag": "🇭🇹",
+  "languages": ["ht", "fr", "en"],
+  "lastVerified": "2026-11-07",
+  "hazards": ["cyclone", "flood", "earthquake", "landslide", "tsunami"],
+  "emergencyNumbers": { "police": "114", "ambulance": "116", "fire": "115" },
+  "warningSystem": "The Direction de la Protection Civile (DPC) issues color-coded alerts (green, yellow, orange, red) on radio, SMS and through local Civil Protection committees. Red means evacuate exposed areas immediately.",
+  "agencies": [
+    {
+      "id": "ht-dpc",
+      "name": "Direction de la Protection Civile",
+      "shortName": "DPC",
+      "kind": "government",
+      "description": "National civil protection agency. Departmental and communal civil protection committees run local evacuation and shelters.",
+      "website": "https://protectioncivile.gouv.ht"
+    },
+    {
+      "id": "ht-unm",
+      "name": "Unité Hydrométéorologique d'Haïti",
+      "shortName": "UHM",
+      "kind": "warning",
+      "description": "National weather and hurricane forecasts.",
+      "hazards": ["cyclone", "flood", "landslide"]
+    },
+    {
+      "id": "ht-crh",
+      "name": "Haitian Red Cross (Croix-Rouge Haïtienne)",
+      "shortName": "CRH",
+      "kind": "red_cross",
+      "description": "First aid, ambulance support, emergency relief items and community volunteers.",
+      "website": "https://www.croixrouge.ht"
+    },
+    {
+      "id": "ht-wfp",
+      "name": "World Food Programme Haiti",
+      "shortName": "WFP",
+      "kind": "un",
+      "description": "Emergency food and cash assistance after hurricanes and earthquakes.",
+      "website": "https://www.wfp.org/countries/haiti"
+    }
+  ],
+  "programs": [
+    {
+      "id": "ht-food",
+      "name": "Emergency food / cash distribution",
+      "provider": "WFP with DPC and partners",
+      "description": "Hot meals, food kits or cash transfers for affected households.",
+      "howToApply": "Register with your communal civil protection committee or at shelter registration desks.",
+      "eligibility": {}
+    },
+    {
+      "id": "ht-shelter-kit",
+      "name": "Emergency shelter kits",
+      "provider": "Haitian Red Cross / IOM partners",
+      "description": "Tarpaulins, tools and household items for damaged homes.",
+      "howToApply": "Ask the civil protection committee or Red Cross volunteers to record your damaged home.",
+      "eligibility": { "any": ["weak_home"] }
+    },
+    {
+      "id": "ht-mch",
+      "name": "Mother and child health support",
+      "provider": "Ministry of Public Health (MSPP) and partners",
+      "description": "Antenatal care, safe delivery support, infant nutrition.",
+      "howToApply": "Go to the nearest health center or mobile clinic.",
+      "eligibility": { "any": ["pregnant", "infants"] }
+    }
+  ],
+  "districts": [
+    { "id": "ht-pap", "name": "Port-au-Prince", "region": "Ouest", "lat": 18.54, "lon": -72.34, "coastal": true, "floodProne": true, "landslideProne": true, "seismic": "high" },
+    { "id": "ht-cayes", "name": "Les Cayes", "region": "Sud", "lat": 18.19, "lon": -73.75, "coastal": true, "floodProne": true, "landslideProne": false, "seismic": "high" },
+    { "id": "ht-jeremie", "name": "Jérémie", "region": "Grand'Anse", "lat": 18.65, "lon": -74.12, "coastal": true, "floodProne": false, "landslideProne": true, "seismic": "high" },
+    { "id": "ht-gonaives", "name": "Gonaïves", "region": "Artibonite", "lat": 19.45, "lon": -72.69, "coastal": true, "floodProne": true, "landslideProne": false, "seismic": "moderate" },
+    { "id": "ht-cap", "name": "Cap-Haïtien", "region": "Nord", "lat": 19.76, "lon": -72.2, "coastal": true, "floodProne": true, "landslideProne": true, "seismic": "high" }
+  ],
+  "shelters": [
+    { "id": "ht-s1", "name": "Champ de Mars open area (sample)", "districtId": "ht-pap", "lat": 18.54, "lon": -72.34, "kind": "open_space", "features": ["wheelchair", "pets"], "hazards": ["earthquake"], "verified": false },
+    { "id": "ht-s2", "name": "Pétion-Ville hillside school shelter (sample)", "districtId": "ht-pap", "lat": 18.51, "lon": -72.29, "kind": "school", "capacity": 500, "features": ["water", "women_space"], "hazards": ["cyclone", "flood", "tsunami"], "verified": false },
+    { "id": "ht-s3", "name": "Les Cayes Lycée shelter (sample)", "districtId": "ht-cayes", "lat": 18.2, "lon": -73.74, "kind": "school", "capacity": 700, "features": ["water", "medical"], "hazards": ["cyclone", "flood"], "verified": false },
+    { "id": "ht-s4", "name": "Jérémie church community hall (sample)", "districtId": "ht-jeremie", "lat": 18.64, "lon": -74.11, "kind": "community_hall", "capacity": 400, "features": ["water"], "hazards": ["cyclone", "tsunami"], "verified": false },
+    { "id": "ht-s5", "name": "Gonaïves upland school shelter (sample)", "districtId": "ht-gonaives", "lat": 19.46, "lon": -72.67, "kind": "school", "capacity": 600, "features": ["wheelchair", "water", "livestock"], "hazards": ["cyclone", "flood"], "verified": false },
+    { "id": "ht-s6", "name": "Cap-Haïtien hospital-adjacent shelter (sample)", "districtId": "ht-cap", "lat": 19.75, "lon": -72.21, "kind": "evacuation_center", "capacity": 500, "features": ["medical", "power", "wheelchair"], "hazards": ["cyclone", "flood", "earthquake"], "verified": false }
+  ]
+}

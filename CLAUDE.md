@@ -56,8 +56,8 @@ src/types.ts        shared types
 
 ## Status / roadmap
 - [x] 1. Scaffold Expo app + CLAUDE.md + README
-- [ ] 2. Types, profile store, onboarding flow
-- [ ] 3. Country seed data + guidance templates
+- [x] 2. Types + offline seed data (5 countries) + guidance templates
+- [ ] 3. Profile store + onboarding flow
 - [ ] 4. Plan engine + tests + Plan tab
 - [ ] 5. Help tab (shelters, agencies, tap-to-call, directions)
 - [ ] 6. Live alerts service + Home tab, offline caching
@@ -66,3 +66,6 @@ src/types.ts        shared types
 ## Decisions log
 - 2026-11-07: Expo + TS chosen; bundled offline data + live GDACS/ReliefWeb alerts; seed countries
   Bangladesh (BD), Philippines (PH), Haiti (HT), Mozambique (MZ), Nepal (NP). No backend in v1.
+- 2026-11-07: Reordered milestones 2/3 — data layer landed before onboarding because the country/district
+  pickers depend on it. Phone numbers only included where well-known; others left blank rather than guessed.
+  All shelters are `verified: false` sample entries with approximate coordinates.

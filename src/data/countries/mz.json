@@ -1,0 +1,95 @@
+{
+  "code": "MZ",
+  "name": "Mozambique",
+  "flag": "🇲🇿",
+  "languages": ["pt", "en"],
+  "lastVerified": "2026-11-07",
+  "hazards": ["cyclone", "flood", "earthquake"],
+  "emergencyNumbers": { "police": "119", "ambulance": "117", "fire": "198" },
+  "warningSystem": "INAM (weather institute) and INGD issue cyclone and flood alerts by color: blue, yellow, red. Local Disaster Risk Management Committees (CLGRC) spread warnings with whistles, flags and radio. Red means evacuate now.",
+  "agencies": [
+    {
+      "id": "mz-ingd",
+      "name": "Instituto Nacional de Gestão e Redução do Risco de Desastres",
+      "shortName": "INGD",
+      "kind": "government",
+      "description": "National disaster management institute: early warning, evacuation, accommodation centers and relief.",
+      "website": "https://www.ingd.gov.mz"
+    },
+    {
+      "id": "mz-inam",
+      "name": "Instituto Nacional de Meteorologia",
+      "shortName": "INAM",
+      "kind": "warning",
+      "description": "Weather and cyclone forecasts and alerts.",
+      "hazards": ["cyclone", "flood"],
+      "website": "https://www.inam.gov.mz"
+    },
+    {
+      "id": "mz-cvm",
+      "name": "Mozambique Red Cross (Cruz Vermelha de Moçambique)",
+      "shortName": "CVM",
+      "kind": "red_cross",
+      "description": "Search and rescue, first aid, water and hygiene, relief kits and family tracing.",
+      "website": "https://www.redcross.org.mz"
+    },
+    {
+      "id": "mz-wfp",
+      "name": "World Food Programme Mozambique",
+      "shortName": "WFP",
+      "kind": "un",
+      "description": "Emergency food and cash assistance after cyclones and floods.",
+      "website": "https://www.wfp.org/countries/mozambique"
+    },
+    {
+      "id": "mz-linhaverde",
+      "name": "Linha Verde (humanitarian feedback line)",
+      "kind": "ngo",
+      "description": "Free line to ask about humanitarian assistance or report problems with aid distribution.",
+      "phone": "1458"
+    }
+  ],
+  "programs": [
+    {
+      "id": "mz-food",
+      "name": "Emergency food assistance",
+      "provider": "INGD / WFP",
+      "description": "Food baskets or cash/vouchers for displaced and affected families.",
+      "howToApply": "Register at the accommodation center or with your local community leader / CLGRC. Call Linha Verde 1458 with questions.",
+      "eligibility": {}
+    },
+    {
+      "id": "mz-shelter",
+      "name": "Shelter and house reconstruction kits",
+      "provider": "INGD and Shelter Cluster partners",
+      "description": "Tarpaulins, tools and materials to repair or rebuild damaged homes.",
+      "howToApply": "Make sure your household is on the community damage list made by INGD and local leaders.",
+      "eligibility": { "any": ["weak_home"] }
+    },
+    {
+      "id": "mz-health",
+      "name": "Cholera prevention and health support",
+      "provider": "Ministry of Health and CVM",
+      "description": "Water purification tablets, oral rehydration, vaccination campaigns after floods.",
+      "howToApply": "Ask at the nearest health post or Red Cross volunteers.",
+      "eligibility": { "any": ["infants", "children", "elderly", "pregnant", "medication"] }
+    }
+  ],
+  "districts": [
+    { "id": "mz-beira", "name": "Beira", "region": "Sofala", "lat": -19.84, "lon": 34.84, "coastal": true, "floodProne": true, "landslideProne": false, "seismic": "low" },
+    { "id": "mz-buzi", "name": "Búzi", "region": "Sofala", "lat": -19.87, "lon": 34.6, "coastal": false, "floodProne": true, "landslideProne": false, "seismic": "low" },
+    { "id": "mz-quelimane", "name": "Quelimane", "region": "Zambézia", "lat": -17.88, "lon": 36.89, "coastal": true, "floodProne": true, "landslideProne": false, "seismic": "low" },
+    { "id": "mz-pemba", "name": "Pemba", "region": "Cabo Delgado", "lat": -12.97, "lon": 40.52, "coastal": true, "floodProne": false, "landslideProne": false, "seismic": "low" },
+    { "id": "mz-chokwe", "name": "Chókwè", "region": "Gaza", "lat": -24.53, "lon": 33.0, "coastal": false, "floodProne": true, "landslideProne": false, "seismic": "low" },
+    { "id": "mz-maputo", "name": "Maputo", "region": "Maputo", "lat": -25.97, "lon": 32.57, "coastal": true, "floodProne": true, "landslideProne": false, "seismic": "moderate" }
+  ],
+  "shelters": [
+    { "id": "mz-s1", "name": "Beira Escola Secundária accommodation center (sample)", "districtId": "mz-beira", "lat": -19.83, "lon": 34.86, "kind": "school", "capacity": 1000, "features": ["water", "women_space", "wheelchair"], "hazards": ["cyclone", "flood"], "verified": false },
+    { "id": "mz-s2", "name": "Beira Central Hospital area shelter (sample)", "districtId": "mz-beira", "lat": -19.84, "lon": 34.84, "kind": "evacuation_center", "capacity": 300, "features": ["medical", "power", "wheelchair"], "hazards": ["cyclone", "flood"], "verified": false },
+    { "id": "mz-s3", "name": "Búzi raised accommodation center (sample)", "districtId": "mz-buzi", "lat": -19.88, "lon": 34.62, "kind": "community_hall", "capacity": 800, "features": ["livestock", "water"], "hazards": ["flood", "cyclone"], "verified": false },
+    { "id": "mz-s4", "name": "Quelimane school shelter (sample)", "districtId": "mz-quelimane", "lat": -17.87, "lon": 36.88, "kind": "school", "capacity": 600, "features": ["water"], "hazards": ["cyclone", "flood"], "verified": false },
+    { "id": "mz-s5", "name": "Pemba upper-town school shelter (sample)", "districtId": "mz-pemba", "lat": -12.98, "lon": 40.5, "kind": "school", "capacity": 500, "features": ["water", "women_space"], "hazards": ["cyclone", "tsunami"], "verified": false },
+    { "id": "mz-s6", "name": "Chókwè high-ground accommodation center (sample)", "districtId": "mz-chokwe", "lat": -24.5, "lon": 33.02, "kind": "evacuation_center", "capacity": 1200, "features": ["livestock", "pets", "water", "medical"], "hazards": ["flood"], "verified": false },
+    { "id": "mz-s7", "name": "Maputo Pavilhão shelter (sample)", "districtId": "mz-maputo", "lat": -25.96, "lon": 32.58, "kind": "evacuation_center", "capacity": 1500, "features": ["wheelchair", "medical", "power", "water"], "hazards": ["cyclone", "flood", "earthquake"], "verified": false }
+  ]
+}

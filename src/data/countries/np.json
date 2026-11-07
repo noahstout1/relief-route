@@ -1,0 +1,87 @@
+{
+  "code": "NP",
+  "name": "Nepal",
+  "flag": "🇳🇵",
+  "languages": ["ne", "en"],
+  "lastVerified": "2026-11-07",
+  "hazards": ["earthquake", "flood", "landslide"],
+  "emergencyNumbers": { "police": "100", "ambulance": "102", "fire": "101" },
+  "warningSystem": "The Department of Hydrology and Meteorology (DHM) sends flood early-warning SMS to people living along major rivers and issues heavy-rain alerts. Local ward offices and Nepal Police announce evacuations. There is no warning before earthquakes: practise Drop, Cover, Hold On.",
+  "agencies": [
+    {
+      "id": "np-ndrrma",
+      "name": "National Disaster Risk Reduction and Management Authority",
+      "shortName": "NDRRMA",
+      "kind": "government",
+      "description": "National disaster authority. Provincial and local (municipality/ward) disaster committees lead local response.",
+      "website": "https://bipad.gov.np"
+    },
+    {
+      "id": "np-dhm",
+      "name": "Department of Hydrology and Meteorology",
+      "shortName": "DHM",
+      "kind": "warning",
+      "description": "Flood early-warning SMS and heavy-rainfall alerts.",
+      "hazards": ["flood", "landslide"],
+      "website": "https://www.dhm.gov.np"
+    },
+    {
+      "id": "np-police",
+      "name": "Nepal Police / Armed Police Force",
+      "kind": "government",
+      "description": "Search, rescue and evacuation. Call 100.",
+      "phone": "100"
+    },
+    {
+      "id": "np-nrcs",
+      "name": "Nepal Red Cross Society",
+      "shortName": "NRCS",
+      "kind": "red_cross",
+      "description": "First aid, ambulance network, relief items, cash support and restoring family links.",
+      "website": "https://nrcs.org"
+    }
+  ],
+  "programs": [
+    {
+      "id": "np-relief",
+      "name": "Immediate relief (food, tarpaulin, cash)",
+      "provider": "Local government (ward office) with NDRRMA",
+      "description": "Immediate relief packages and cash for families affected by floods, landslides or earthquakes.",
+      "howToApply": "Report to your ward office. Bring citizenship certificate if available; families without documents can still be listed.",
+      "eligibility": {}
+    },
+    {
+      "id": "np-housing",
+      "name": "Housing damage support / reconstruction grant",
+      "provider": "Government of Nepal",
+      "description": "Support for families whose homes were damaged or destroyed, after official damage assessment.",
+      "howToApply": "Make sure your house is inspected and listed in the ward damage assessment.",
+      "eligibility": { "any": ["weak_home"] }
+    },
+    {
+      "id": "np-nrcs-cash",
+      "name": "Red Cross cash and relief",
+      "provider": "Nepal Red Cross Society",
+      "description": "Cash grants and relief items, prioritising vulnerable households.",
+      "howToApply": "Contact your district Red Cross chapter or volunteers in your area.",
+      "eligibility": { "any": ["elderly", "infants", "pregnant", "mobility", "lives_alone"] }
+    }
+  ],
+  "districts": [
+    { "id": "np-ktm", "name": "Kathmandu", "region": "Bagmati", "lat": 27.71, "lon": 85.32, "coastal": false, "floodProne": false, "landslideProne": false, "seismic": "high" },
+    { "id": "np-gorkha", "name": "Gorkha", "region": "Gandaki", "lat": 28.0, "lon": 84.63, "coastal": false, "floodProne": false, "landslideProne": true, "seismic": "high" },
+    { "id": "np-sindhu", "name": "Sindhupalchok", "region": "Bagmati", "lat": 27.95, "lon": 85.68, "coastal": false, "floodProne": true, "landslideProne": true, "seismic": "high" },
+    { "id": "np-kaski", "name": "Pokhara / Kaski", "region": "Gandaki", "lat": 28.21, "lon": 83.99, "coastal": false, "floodProne": true, "landslideProne": true, "seismic": "high" },
+    { "id": "np-saptari", "name": "Saptari", "region": "Madhesh", "lat": 26.62, "lon": 86.7, "coastal": false, "floodProne": true, "landslideProne": false, "seismic": "moderate" },
+    { "id": "np-bardiya", "name": "Bardiya", "region": "Lumbini", "lat": 28.3, "lon": 81.4, "coastal": false, "floodProne": true, "landslideProne": false, "seismic": "moderate" }
+  ],
+  "shelters": [
+    { "id": "np-s1", "name": "Tundikhel open space (sample)", "districtId": "np-ktm", "lat": 27.7, "lon": 85.31, "kind": "open_space", "features": ["wheelchair", "water", "pets"], "hazards": ["earthquake"], "verified": false },
+    { "id": "np-s2", "name": "Bir Hospital area emergency site (sample)", "districtId": "np-ktm", "lat": 27.71, "lon": 85.31, "kind": "evacuation_center", "capacity": 500, "features": ["medical", "power", "wheelchair"], "hazards": ["earthquake", "flood"], "verified": false },
+    { "id": "np-s3", "name": "Gorkha Bazaar school open ground (sample)", "districtId": "np-gorkha", "lat": 28.0, "lon": 84.63, "kind": "open_space", "features": ["water", "livestock"], "hazards": ["earthquake", "landslide"], "verified": false },
+    { "id": "np-s4", "name": "Chautara community hall (sample)", "districtId": "np-sindhu", "lat": 27.78, "lon": 85.72, "kind": "community_hall", "capacity": 300, "features": ["water", "medical"], "hazards": ["landslide", "flood", "earthquake"], "verified": false },
+    { "id": "np-s5", "name": "Pokhara Rangasala grounds (sample)", "districtId": "np-kaski", "lat": 28.22, "lon": 83.99, "kind": "open_space", "features": ["wheelchair", "water", "pets"], "hazards": ["earthquake", "flood", "landslide"], "verified": false },
+    { "id": "np-s6", "name": "Rajbiraj raised school shelter (sample)", "districtId": "np-saptari", "lat": 26.54, "lon": 86.75, "kind": "school", "capacity": 700, "features": ["livestock", "water", "women_space"], "hazards": ["flood"], "verified": false },
+    { "id": "np-s7", "name": "Gulariya flood shelter (sample)", "districtId": "np-bardiya", "lat": 28.23, "lon": 81.34, "kind": "evacuation_center", "capacity": 600, "features": ["livestock", "water", "medical", "wheelchair"], "hazards": ["flood"], "verified": false }
+  ]
+}
