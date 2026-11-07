@@ -133,3 +133,13 @@ describe('data integrity', () => {
     expect(new Set(ids).size).toBe(ids.length);
   });
 });
+
+describe('i18n', () => {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { translate } = require('../../i18n');
+  it('translates known keys and falls back to English', () => {
+    expect(translate('bn', 'hz_flood')).toBe('বন্যা');
+    expect(translate('bn', 'sampleData')).toMatch(/Sample data/);
+    expect(translate('en', 'kmAway', { km: 3 })).toBe('3 km away');
+  });
+});

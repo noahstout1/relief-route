@@ -18,6 +18,14 @@ personalized plan from their household and home.
 > ⚠️ Shelter and contact data in this repository is sample/seed data. Always follow instructions
 > from your local authorities.
 
+## How personalization works
+1. Your profile (household + home + district) is turned into *flags* — e.g. `infants`, `mobility`, `weak_home`, `coastal`, `flood_prone`.
+2. Per-hazard risk rules score those flags into a decision: **Evacuate**, **Get ready to leave**, or **Stay and prepare**, with the reasons shown.
+3. Guidance actions, go-bag items and relief programs are filtered by the same flags.
+4. Shelters are ranked by distance plus a penalty for each feature your family needs that the shelter lacks (wheelchair access, medical care, power, pets, livestock).
+
+Your data never leaves the phone.
+
 ## Run it
 ```bash
 npm install

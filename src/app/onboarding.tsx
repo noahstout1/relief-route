@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import { ContactsStep, HomeStep, HouseholdStep, WhereStep } from '../components/ProfileForm';
 import { Body, Button, H1, Screen } from '../components/ui';
 import { useT } from '../i18n/useT';
-import { defaultProfile } from '../store/defaults';
+import { defaultProfile, deviceDefaults } from '../store/defaults';
 import { useProfile } from '../store/ProfileProvider';
 import { space } from '../theme';
 
@@ -17,7 +17,10 @@ const STEPS = [
 
 export default function Onboarding() {
   const { saveProfile } = useProfile();
-  const [draft, setDraft] = useState(defaultProfile());
+  const [draft, setDraft] = useState(() => {
+    const d = deviceDefaults();
+    return defaultProfile(d.countryCode, d.language);
+  });
   const [step, setStep] = useState(0);
   const t = useT(draft.language);
   const { key, C } = STEPS[step];

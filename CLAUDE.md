@@ -61,7 +61,17 @@ src/types.ts        shared types
 - [x] 4. Plan engine (flags → risk rules → decision, guidance, kit, shelters, programs) + 18 Jest tests + Plan tab
 - [x] 5. Help tab: tap-to-call emergency numbers, ranked shelters w/ suitability filter, agencies, directions
 - [x] 6. Live GDACS alerts (country + nearby offshore cyclones), AsyncStorage cache, Home tab with urgent banner
-- [ ] 7. i18n + accessibility polish
+- [x] 7. UI translations (bn, tl, ht, fr, pt, ne — drafts, need native review), device-locale defaults, a11y roles + 44–48px touch targets
+
+## Next ideas (not started)
+- Translate guidance.json content (currently English only); native-speaker review of src/i18n/partial.ts
+- Replace sample shelters with verified government shelter lists; add more districts
+- ReliefWeb integration once an appname is approved; SMS/USSD fallback for feature phones
+- Push notifications for Orange/Red GDACS alerts in the user's area
+- Offline map tiles for shelter directions
+
+## Collaborators
+- Write access invited: Crazycoder612, psmutthineni. `neizflux` does not exist on GitHub (404) — need correct username.
 
 ## Decisions log
 - 2026-11-07: Expo + TS chosen; bundled offline data + live GDACS/ReliefWeb alerts; seed countries
