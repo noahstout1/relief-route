@@ -59,7 +59,7 @@ src/types.ts        shared types
 - [x] 2. Types + offline seed data (5 countries) + guidance templates
 - [x] 3. Profile store (AsyncStorage) + 4-step onboarding + editable Profile tab
 - [x] 4. Plan engine (flags → risk rules → decision, guidance, kit, shelters, programs) + 18 Jest tests + Plan tab
-- [ ] 5. Help tab (shelters, agencies, tap-to-call, directions)
+- [x] 5. Help tab: tap-to-call emergency numbers, ranked shelters w/ suitability filter, agencies, directions
 - [ ] 6. Live alerts service + Home tab, offline caching
 - [ ] 7. i18n + accessibility polish
 

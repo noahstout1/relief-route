@@ -6,7 +6,7 @@ import type { Decision } from '../engine/planEngine';
 import type { RankedShelter } from '../engine/shelterFinder';
 import type { StringKey } from '../i18n';
 import { colors, font, space } from '../theme';
-import type { Agency, GuidanceAction, HazardType, LatLon, ReliefProgram } from '../types';
+import type { Agency, EmergencyNumbers, GuidanceAction, HazardType, LatLon, ReliefProgram } from '../types';
 import { Body, Card, H2 } from './ui';
 
 type T = (key: StringKey, vars?: Record<string, string | number>) => string;
@@ -181,6 +181,53 @@ export function ActionsSection({ title, actions, storageKey }: { title: string; 
     </Card>
   );
 }
+
+const NUMBER_LABEL: Record<keyof EmergencyNumbers, string> = {
+  general: 'Emergency',
+  police: 'Police',
+  ambulance: 'Ambulance',
+  fire: 'Fire',
+  disaster: 'Disaster info',
+};
+
+export function EmergencyNumbersRow({ numbers }: { numbers: EmergencyNumbers }) {
+  return (
+    <View style={n.numbers}>
+      {(Object.keys(numbers) as (keyof EmergencyNumbers)[]).map((k) => (
+        <Pressable
+          key={k}
+          onPress={() => callNumber(numbers[k]!)}
+          style={({ pressed }) => [n.number, pressed && { opacity: 0.8 }]}
+          accessibilityRole="button"
+          accessibilityLabel={`Call ${NUMBER_LABEL[k]} ${numbers[k]}`}
+        >
+          <Ionicons name="call" size={20} color="#fff" />
+          <View>
+            <Text style={n.numberValue}>{numbers[k]}</Text>
+            <Text style={n.numberLabel}>{NUMBER_LABEL[k]}</Text>
+          </View>
+        </Pressable>
+      ))}
+    </View>
+  );
+}
+
+const n = StyleSheet.create({
+  numbers: { flexDirection: 'row', flexWrap: 'wrap', gap: space.sm },
+  number: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space.sm,
+    backgroundColor: colors.danger,
+    borderRadius: 12,
+    paddingHorizontal: space.lg,
+    paddingVertical: space.md,
+    minWidth: 140,
+    flexGrow: 1,
+  },
+  numberValue: { color: '#fff', fontSize: font.xl, fontWeight: '800' },
+  numberLabel: { color: '#fff', fontSize: font.sm, fontWeight: '600' },
+});
 
 const s = StyleSheet.create({
   decision: { borderRadius: 14, padding: space.lg, gap: space.xs },
